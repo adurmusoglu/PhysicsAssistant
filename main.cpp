@@ -59,7 +59,8 @@ int main()
 }
 
 
-// Takes input, calculates, and displays the XY Components of vector
+// displayXYComps takes magnitude and direction in degrees of the vector
+// as input, then calculates and displays the XY Components of vector
 
 void displayXYComps()
 {
@@ -78,7 +79,8 @@ void displayXYComps()
     cin.get();
 }
 
-// FUNCTION COMMENT HERE
+// displayMagnAngle takes the x and y compositions of the vector, 
+// and displays the magnitude and direction of the vector
 
 void displayMagnAngle()
 {
@@ -94,7 +96,15 @@ void displayMagnAngle()
 
     // Adjusts the atan value for the quadrant
 
-    if (xComp < 0) // Quadrants II and III
+    if (xComp == 0 && yComp > 0) // Undefined special case that cmath errors out
+    {
+        angle = 90;
+    }
+    else if (xComp == 0 && yComp < 0) // Undefined special case that cmath errors out
+    {
+        angle = 270;
+    }
+    else if (xComp < 0) // Quadrants II and III
     {
         angle = (atan(yComp / xComp) * (180 / M_PI)) + 180;
     }
@@ -114,7 +124,8 @@ void displayMagnAngle()
     cin.get();
 }
 
-// FUNCTION COMMENT HERE
+// displayAddVectors allows the user to add as many vectors they want
+// together by entering their magnitudes and directions in degrees
 
 void displayAddVectors()
 {
