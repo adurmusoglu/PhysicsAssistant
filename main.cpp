@@ -9,6 +9,7 @@ using namespace std;
 void displayXYComps();
 void displayMagnAngle();
 void displayAddVectors();
+void calculateAngle(double, double, double&);
 
 int main()
 {
@@ -66,7 +67,7 @@ void displayXYComps()
 {
     double magnitude, angle;
     
-    cout << "Vector magnitude: ";
+    cout << "\nVector magnitude: ";
     cin >> magnitude;
     cout << "Vector angle (DEG): ";
     cin >> angle;
@@ -96,26 +97,7 @@ void displayMagnAngle()
 
     // Adjusts the atan value for the quadrant
 
-    if (xComp == 0 && yComp > 0) // Undefined special case that cmath errors out
-    {
-        angle = 90;
-    }
-    else if (xComp == 0 && yComp < 0) // Undefined special case that cmath errors out
-    {
-        angle = 270;
-    }
-    else if (xComp < 0) // Quadrants II and III
-    {
-        angle = (atan(yComp / xComp) * (180 / M_PI)) + 180;
-    }
-    else if (yComp < 0 && xComp >= 0) // Quadrants IV
-    {
-        angle = (atan(yComp / xComp) * (180 / M_PI)) + 360;
-    }
-    else // Quadrant I
-    {
-        angle = atan(yComp / xComp) * (180 / M_PI);
-    }
+    calculateAngle(xComp, yComp, angle);
 
     cout << "\nThe magnitude is " << sqrt(pow(xComp, 2) + pow(yComp, 2)) << "."
         << "\nThe angle from x+ axis is " << angle << " degrees.\n";
@@ -166,24 +148,35 @@ void displayAddVectors()
     
     } while (addAnother == 'Y');
 
-    // Adjusts the atan value for the quadrant
-
-    if (totalX < 0) // Quadrants II and III
-    {
-        angle = (atan(totalY / totalX) * (180 / M_PI)) + 180;
-    }
-    else if (totalY < 0 && totalX >= 0) // Quadrants IV
-    {
-        angle = (atan(totalY / totalX) * (180 / M_PI)) + 360;
-    }
-    else // Quadrant I
-    {
-        angle = atan(totalY / totalX) * (180 / M_PI);
-    }
+    calculateAngle(totalX, totalY, angle);
 
     cout << "\nThe magnitude is " << sqrt(pow(totalX, 2) + pow(totalY, 2)) << "."
         << "\nThe angle from x+ axis is " << angle << " degrees.\n";
     cout << "\nPress ENTER to continue.\n";
     cin.ignore(32, '\n');
     cin.get();
+}
+
+void calculateAngle(double xComp, double yComp, double &angle)
+{
+    if (xComp == 0 && yComp > 0) // Undefined special case that cmath errors out
+    {
+        angle = 90;
+    }
+    else if (xComp == 0 && yComp < 0) // Undefined special case that cmath errors out
+    {
+        angle = 270;
+    }
+    else if (xComp < 0) // Quadrants II and III
+    {
+        angle = (atan(yComp / xComp) * (180 / M_PI)) + 180;
+    }
+    else if (yComp < 0 && xComp >= 0) // Quadrants IV
+    {
+        angle = (atan(yComp / xComp) * (180 / M_PI)) + 360;
+    }
+    else // Quadrant I
+    {
+        angle = atan(yComp / xComp) * (180 / M_PI);
+    }
 }
