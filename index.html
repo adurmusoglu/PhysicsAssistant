@@ -20,25 +20,43 @@
             <div class="calculator">
                 <fieldset id="menu" class="menu">
                     <div class="button-container">
-                        <button type="submit">Find x and y components of a vector using its magnitude and angle</button>
-                        <button>Find magnitude of vector and its angle using x and y components</button>
-                        <button>Add vectors together</button>
-                        <button>Future topic I haven't done yet</button>
+                        <h3>Calculations Menu</h3>
+                        <button id="xycomps" type="submit">Find x and y components of a vector using its magnitude and angle</button>
+                        <button id="magnitude" type="submit">Find magnitude of vector and its angle using x and y components</button>
+                        <button id="add-vectors" type="submit">Add vectors together</button>
+                        <button id="future-topics" type="submit">Future topic I haven't done yet</button>
                     </div>
                 </fieldset>
-                <div class="input-output">
-                    <fieldset id="user-input">
-
-                    </fieldset>
-                    <fieldset id="calc-output">
-
-                    </fieldset>
-                    <!-- I could also add a fielset for tutorial and the equation on how to actually do it once user chooses from menu -->
+                <div id="input-output" class=>
+                    <div id="default-text">
+                        <fieldset>
+                        <h3>Select a task from the menu to continue.</h3>
+                        </fieldset>
+                    </div>
+                    <div id="xycomps-input" class="hidden">
+                        <button id="input-submit" type="submit">Calculate!</button>
+                    </div>
+                    <div id="magnitude-input" class="hidden">
+                        <button id="input-submit" type="submit">Calculate!</button>
+                    </div>
+                    <div id="add-vectors-input" class="hidden">
+                        <button id="input-submit" type="submit">Calculate!</button>
+                    </div>
+                    <div id="future-topics-input" class="hidden">
+                        <p>Future topics</p>
+                    </div>
+                    <div id="output-box">
+                        <fieldset id="calc-output">
+                        <p>output</p>
+                        </fieldset>
+                    </div>
+                    <!-- I could also add a fieldset for tutorial and the equation on how to actually do it once user chooses from menu -->
                 </div>
             </div>
         </main>
         <footer>
 
         </footer>
+        <script src="app.js"></script>
     </body>
 </html>
