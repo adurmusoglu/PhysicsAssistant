@@ -1,3 +1,4 @@
+<!-- This is the first website I've attempted to make. Go easy with your judgements. -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,24 +7,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Physics Assistant</title>
     </head>
-    <header>
-        <a href="index.html"><h1>Physics Assistant</h1></a>
-    </header>
+    
     <body>
-        <fieldset class="title">
-            <h1>Physics Assistant</h1>
-            <p>A calculator to do the boring math of your mechanical physics homework</p>
-        </fieldset>
-        <fieldset class="menu">
-            <legend>What would you like to do?</legend>
-            <div class="button-container">
-                <form action="xycomps.html" method="POST">
-                    <button type="submit">Find x and y components of a vector using its magnitude and angle</button>
-                </form>
-                <button>Find magnitude of vector and its angle using x and y components</button>
-                <button>Add vectors together</button>
-                <button>Future topic I haven't done yet</button>
+        <header class="header">
+            <a href="index.html"><h1>Physics Assistant</h1></a>
+        </header>
+        <main>
+            <fieldset id="title" class="title">
+                <h1>Physics Assistant</h1>
+                <p>A calculator to do the boring math of your mechanical physics homework</p>
+            </fieldset>
+            <div class="calculator">
+                <fieldset id="menu" class="menu">
+                    <div class="button-container">
+                        <button type="submit">Find x and y components of a vector using its magnitude and angle</button>
+                        <button>Find magnitude of vector and its angle using x and y components</button>
+                        <button>Add vectors together</button>
+                        <button>Future topic I haven't done yet</button>
+                    </div>
+                </fieldset>
+                <div class="input-output">
+                    <fieldset id="user-input">
+
+                    </fieldset>
+                    <fieldset id="calc-output">
+
+                    </fieldset>
+                    <!-- I could also add a fielset for tutorial and the equation on how to actually do it once user chooses from menu -->
+                </div>
             </div>
-        </fieldset>
+        </main>
+        <footer>
+
+        </footer>
     </body>
 </html>
