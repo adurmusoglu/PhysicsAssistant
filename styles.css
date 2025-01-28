@@ -76,6 +76,25 @@ button {
     max-width: 30%;
 }
 
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input input {
+    max-width: 25%;
+    height: 30px;
+    border: 0;
+}
+
+.calculate {
+    background-color: #808588;
+    color: #fff;
+    width: 25%;
+    height: 50px;
+}
+
 .hidden {
-    display: none;
+    display: none; 
 }

@@ -27,30 +27,33 @@
                         <button id="future-topics" type="submit">Future topic I haven't done yet</button>
                     </div>
                 </fieldset>
-                <div id="input-output" class=>
-                    <div id="default-text">
+                <div id="input-output">
+                    <div id="default-text" class="input">
                         <fieldset>
                         <h3>Select a task from the menu to continue.</h3>
                         </fieldset>
                     </div>
-                    <div id="xycomps-input" class="hidden">
-                        <button id="input-submit" type="submit">Calculate!</button>
+                    <div id="xycomps-input" class="hidden input">
+                        <label for="xy-magn-input">Enter the magnitude: </label><input name="xy-magn-input" id="xy-magn-input" type="number"/>
+                        <label for="xy-angle-input">Enter the angle from x+ axis (in degrees):</label><input name="xy-angle-input" id="xy-angle-input" type="number"/>
+                        <button id="xycomps-input-submit" type="submit" class="calculate">Calculate!</button>
                     </div>
-                    <div id="magnitude-input" class="hidden">
-                        <button id="input-submit" type="submit">Calculate!</button>
+                    <div id="magnitude-input" class="hidden input">
+                        <button id="magnitude-input-submit" type="submit" class="calculate">Calculate!</button>
                     </div>
-                    <div id="add-vectors-input" class="hidden">
-                        <button id="input-submit" type="submit">Calculate!</button>
+                    <div id="add-vectors-input" class="hidden input">
+                        <button id="add-vectors-input-submit" type="submit" class="calculate">Calculate!</button>
                     </div>
-                    <div id="future-topics-input" class="hidden">
+                    <div id="future-topics-input" class="hidden input">
                         <p>Future topics</p>
+                        <button id="future-topics-input-submit" type="submit" class="calculate">Calculate!</button>
                     </div>
-                    <div id="output-box">
+                    <!-- I could also add a fieldset for tutorial and the equation on how to actually do it once user chooses from menu -->
+                    <div id="output-box" class="hidden output">
                         <fieldset id="calc-output">
                         <p>output</p>
                         </fieldset>
                     </div>
-                    <!-- I could also add a fieldset for tutorial and the equation on how to actually do it once user chooses from menu -->
                 </div>
             </div>
         </main>
