@@ -21,7 +21,7 @@ int main()
 
         // User makes choice of what they want to do
 
-        cout << " PHYS 2325 Assistant\n" 
+        cout << "   PHYS 2325 Assistant\n" 
             << "(1) Find x and y components of vector using magnitude and angle.\n"
             << "(2) Find magnitude of vector and its angle using x and y components.\n"
             << "(3) Add vectors together.\n"
@@ -156,6 +156,9 @@ void displayAddVectors()
     cin.ignore(32, '\n');
     cin.get();
 }
+
+// calculateAngle accounts for the quadrants and calculates accordingly
+// to find the angle from x+ axis
 
 void calculateAngle(double xComp, double yComp, double &angle)
 {
