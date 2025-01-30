@@ -13,10 +13,11 @@
             <a href="index.html"><h1>Physics Assistant</h1></a>
         </header>
         <main>
-            <fieldset id="title" class="title">
+            <section id="title" class="title">
                 <h1>Physics Assistant</h1>
-                <p>A calculator to do the boring math of your mechanical physics homework</p>
-            </fieldset>
+                <p>An early BETA prototype calculator to do the boring math of your mechanical physics homework</p>
+                
+            </section>
             <div class="calculator">
                 <fieldset id="menu" class="menu">
                     <div class="button-container">
@@ -34,21 +35,30 @@
                         </fieldset>
                     </div>
                     <div id="xycomps-input" class="hidden input">
-                        <label for="xy-magn-input">Enter the magnitude: </label><input name="xy-magn-input" id="xy-magn-input" type="number"/>
-                        <label for="xy-angle-input">Enter the angle from x+ axis (in degrees):</label><input name="xy-angle-input" id="xy-angle-input" type="number"/>
+                        <div>
+                            <label for="xy-magn-input">Enter the magnitude: </label><input name="xy-magn-input" id="xy-magn-input" type="number"/>
+                            <label for="xy-angle-input">Enter the angle from x+ axis (in degrees):</label><input name="xy-angle-input" id="xy-angle-input" type="number"/>
+                        </div>
                         <button id="xycomps-input-submit" type="submit" class="calculate">Calculate!</button>
                     </div>
                     <div id="magnitude-input" class="hidden input">
+                        <div>
+                            <label for="magn-xcomp-input">Enter the X composition of the vector:</label><input name="magn-xcomp-input" id="magn-xcomp-input" type="number"/>
+                            <label for="magn-ycomp-input">Enter the Y composition of the vector:</label><input name="magn-ycomp-input" id="magn-ycomp-input" type="number"/>
+                        </div>
                         <button id="magnitude-input-submit" type="submit" class="calculate">Calculate!</button>
                     </div>
                     <div id="add-vectors-input" class="hidden input">
+                        <fieldset id="vectors-container">
+                            <!-- VECTOR INPUTS WILL BE ADDED BY app.js INTO HERE-->
+                        </fieldset>
+                        <button id="create-a-vector" type="submit" class="vector-create">+ Add a vector</button>
                         <button id="add-vectors-input-submit" type="submit" class="calculate">Calculate!</button>
-                    </div>
                     <div id="future-topics-input" class="hidden input">
                         <p>Future topics</p>
                         <button id="future-topics-input-submit" type="submit" class="calculate">Calculate!</button>
                     </div>
-                    <!-- I could also add a fieldset for tutorial and the equation on how to actually do it once user chooses from menu -->
+                    <!-- in future could also add a fieldset for tutorial video and the equation on how to actually do it once user chooses from menu -->
                     <div id="output-box" class="hidden output">
                         <fieldset id="calc-output">
                         <p>output</p>
